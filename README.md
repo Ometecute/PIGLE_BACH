@@ -1,50 +1,47 @@
-% Copyright (c) 2018, Nadav Avidor.
-% All rights reserved.
-% This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the 
-% GNU/GPL-3.0-or-later.
+Copyright (c) 2018, Nadav Avidor.  
+All rights reserved.  
+This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the  GNU/GPL-3.0-or-later.  
 
 PIGLE - Particles Interacting in Generalized Langevin Equation simulator
 Release: 1.0rc1 (a - alpha , b - beta, rc - release candidate)
-Please cite PIGLE software using doi:// xxxx
+Please cite PIGLE software using [doi://10.1016/j.cpc.2019.04.013](doi://10.1016/j.cpc.2019.04.013)
 
-PIGLE simulator solves the Generalized Langevin Equation for interacting particles, in a 4D potential energy surface.
-The potential has up to 3 spatial dimensions, and a rigid-body like rotation. Particles doesn't neceseraly share the
-same properties (such as mass or friction). When the third spatial dimension ('z') is enabled, the user can choose 
-either constant pressure (where desorbing particles re-appear at the system), or in simple mode where desorbing particles
-are being frozen for later filtration. However, currently there is not much physical use for that feature, and it might
-be removed in future releases. Following the calculation of the particles trajectories, each particle (center of mass)
-can be replaced with a configuration of particles, for example an eight memeber ring of equally contributing scattering
-centers. Such an approach allows the calculations of the intermediate scattering function with a less simplified
-representation of the molecular form factor, and also allows to visualize rotations.
+PIGLE simulator solves the Generalized Langevin Equation for interacting particles, in a 4D potential energy surface. The potential has up to 3 spatial dimensions, and a rigid-body like rotation. Particles doesn't neceseraly share the same properties (such as mass or friction). When the third spatial dimension ('z') is enabled, the user can choose either constant pressure (where desorbing particles re-appear at the system), or in simple mode where desorbing particles are being frozen for later filtration. However, currently there is not much physical use for that feature, and it might be removed in future releases. Following the calculation of the particles trajectories, each particle (center of mass) can be replaced with a configuration of particles, for example an eight memeber ring of equally contributing scattering centers. Such an approach allows the calculations of the intermediate scattering function with a less simplified representation of the molecular form factor, and also allows to visualize rotations.
 
-####################
-# Getting started: #
-####################
+# Getting started
 
-Installation:
--------------
-- Install Matlab (tested with 2017b). If working under Linux, make sure to obtain a supported version of a supported comipiler.
+A more detailed [getting started guide](/documentation/sams_pigle_documentation.md) can be found in the "documentation" folder.
+
+## Installation:
+
+- Install Matlab+Simulink 
+    + Initially tested with 2017b, with MS Windows 10 and Ubuntu 18.04
+    + More recently tested with 2022a, with MS Windows 10 and Ubuntu 22.04
+    + If working under Linux, make sure to obtain a supported version of a supported comipiler.
 - Edit prep_environment.m
+  By default, pigle saves the results in filenames with incrementally increasing numbers, at the directory from which PIGLE is runned.
+  However, one can define a script name in 'data_path_script_name', to generate filenames as one wishes.
+  For complete description of how the path to the datafile is defined, see the function get_data_filename in aux_files/prepFuncs.m
 
-Execution of jobs:
-------------------
-- Create a potential of your choise and save it as 'mat' file, or create a function which generates the potential.
-  One can use the functions and scripts in the subfolder generatePES.
-- Configure the parameters in m-files under the subfolder UI.
-- Run 'run_pigle.m'
+## Execution of jobs
 
-Visualization:
---------------
-The 'make_movie' file will help you to visuallize the dynamics.
+For running a simulation, one needs to define paramteres for the surface (e.g. temperature or mass),
+for the simulation (e.g. total simulation time), and for the post calculation procedures.
 
-Parallel Computing:
--------------------
+1. Configure the parameters in m-files under the subfolder UI: `pigle_ui.m`, `pigle_ui_surface.m`, `pigle_wrapper_params.m`, ...
+2. When configuring `UI/pigle_ui_surface.m` pay attention to how the PES is define.  One needs to define the PES by either creating a potential of choise and save it as 'mat' file, or create a function which generates the potential. One can use the functions and scripts in the subfolder generatePES.
+3. Run 'run_pigle.m'
+
+### Visualization:
+
+The `make_movie.m` file will help you to visuallize the dynamics.
+
+### Parallel Computing:
+
 PIGLE support parallel computing (via matlab/Simulink support).
 
 
-####################
-# List of Files:   #
-####################
+## List of Files
 
 PIGLE:
 aux_files        config_model.m   generatePES  make_movie.m     pigle_sim               prep_environment.m  run_pigle.m      sweepParams  UI
