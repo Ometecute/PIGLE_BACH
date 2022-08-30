@@ -12,7 +12,7 @@ PIGLE simulator solves the Generalized Langevin Equation for interacting particl
 
 ## Getting started
 
-A more detailed [getting started guide](documentation/sams_pigle_documentation.md) can be found in the "documentation" folder.
+A more detailed [getting started guide](blob/sam/PIGLE_documentation/sams_pigle_documentation.md) can be found in the "documentation" folder.
 
 ### Installation:
 
@@ -44,6 +44,8 @@ PIGLE support parallel computing (via matlab/Simulink support).
 
 
 ## List of Files
+
+**Not up to date**
 
 PIGLE:
 aux_files        config_model.m   generatePES  make_movie.m     pigle_sim               prep_environment.m  run_pigle.m      sweepParams  UI
