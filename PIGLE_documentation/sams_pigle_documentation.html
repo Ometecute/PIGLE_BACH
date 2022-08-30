@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="SM Lambrick" />
+  <title>PIGLE Starter Guide</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Linux Biolinum O;
+      font-size: 10pt;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PIGLE Starter Guide</h1>
+<p class="author">SM Lambrick</p>
+<p class="date">August 2022</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#what-is-pigle"><span class="toc-section-number">1</span> What is PIGLE</a>
+<ul>
+<li><a href="#units"><span class="toc-section-number">1.1</span> Units</a></li>
+</ul></li>
+<li><a href="#downloadinginstalling"><span class="toc-section-number">2</span> Downloading/installing</a>
+<ul>
+<li><a href="#prerequisits"><span class="toc-section-number">2.1</span> Prerequisits</a>
+<ul>
+<li><a href="#operating-system"><span class="toc-section-number">2.1.1</span> Operating system</a></li>
+</ul></li>
+<li><a href="#getting-pigle"><span class="toc-section-number">2.2</span> Getting PIGLE</a></li>
+</ul></li>
+<li><a href="#running-pigle"><span class="toc-section-number">3</span> Running PIGLE</a></li>
+<li><a href="#setting-parameters"><span class="toc-section-number">4</span> Setting parameters</a>
+<ul>
+<li><a href="#data-path"><span class="toc-section-number">4.1</span> Data path</a></li>
+<li><a href="#wrapper-parameters"><span class="toc-section-number">4.2</span> Wrapper parameters</a></li>
+<li><a href="#simulation-parameters"><span class="toc-section-number">4.3</span> Simulation parameters</a>
+<ul>
+<li><a href="#overall-simulation-parameters"><span class="toc-section-number">4.3.1</span> Overall simulation parameters</a></li>
+<li><a href="#delta-k-azimuth"><span class="toc-section-number">4.3.2</span> Delta K &amp; azimuth</a></li>
+<li><a href="#beam"><span class="toc-section-number">4.3.3</span> Beam</a></li>
+<li><a href="#time-and-simulation-steps"><span class="toc-section-number">4.3.4</span> Time and simulation steps</a></li>
+</ul></li>
+<li><a href="#surface-parameters"><span class="toc-section-number">4.4</span> Surface parameters</a>
+<ul>
+<li><a href="#pigle-interpolated-pes"><span class="toc-section-number">4.4.1</span> PIGLE interpolated PES</a></li>
+<li><a href="#specifying-your-own-pes"><span class="toc-section-number">4.4.2</span> Specifying your own PES</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#a-pigle-exercise"><span class="toc-section-number">5</span> A PIGLE exercise</a></li>
+</ul>
+</nav>
+<p>This guide goes through the steps of installing then getting started running PIGLE (Particles Interacting in Generalized Langevin Equation simulator). It is a practical instruction set on using the software and does not go into the theory or the science of the method, refer to the <a href="https://doi.org/10.1016/j.cpc.2019.04.013">associated publication</a> for information on the method.</p>
+<h1 data-number="1" id="what-is-pigle"><span class="header-section-number">1</span> What is PIGLE</h1>
+<p>PIGLE (Particles Interacting in Generalized Langevin Equation simulator) is a simulator of adsorbate particle dynamics on surfaces. The adsorbed particles may move in 4 dimensions: <em>x</em>, <em>y</em>, <em>z</em>, and rotations. The simulation of the <em>z</em> and rotational motion is optional. In addition adsorbate-adsorbate interactions may be included. The simulator models the <em>Generalized Langevin Equation</em>,</p>
+<p><span class="math display">\[
+m\ddot{\mathbf{x}}_i = -\nabla V[\mathbf{x}_i(t)] - m\int_{-\infty}^t \gamma_i(t - t^\prime)\dot{\mathbf{x}}_i(t^\prime) \mathrm{d}t^\prime + \zeta(t) + \sum_{j\neq i}F_{ij},
+\]</span></p>
+<p>which includes a time dependent friction term in addition to the <a href="https://en.wikipedia.org/wiki/Langevin_equation">ordinary Langevin Equation</a>.</p>
+<h2 data-number="1.1" id="units"><span class="header-section-number">1.1</span> Units</h2>
+<p>In general the units of PIGLE are:</p>
+<ul>
+<li>ps for time (ps<sup>-1</sup> for inverse time)<br />
+</li>
+<li>Å (Angstroms) for spatial distances (Å<sup>-1</sup> for inverse distances)<br />
+</li>
+<li>meV for energy</li>
+</ul>
+<h1 data-number="2" id="downloadinginstalling"><span class="header-section-number">2</span> Downloading/installing</h1>
+<h2 data-number="2.1" id="prerequisits"><span class="header-section-number">2.1</span> Prerequisits</h2>
+<p>PIGLE uses Matlab and Simulik therefore a local install of both is needed. Refer to the <a href="www.mathworks.com">Mathworks website</a> for instruction on the installation of Matlab and Simulink. PIGLE can be run as a job on a high performance computing unit, however that is not covered in this documentation.</p>
+<p>The following toolboxes are needed in addition to the base install of Matlab+Simulink:</p>
+<ul>
+<li>Parallel Computing Toolbox</li>
+<li>Polyspace Bug Finder</li>
+<li>Simulink Coder</li>
+<li>Simulink Compiler</li>
+<li>DSP system toolbox</li>
+<li>(on linux) a supported compiler such as gcc</li>
+<li>(on Windows) the <a href="https://uk.mathworks.com/matlabcentral/fileexchange/52848-matlab-support-for-mingw-w64-c-c-compiler">MinGW-w64 Compiler toolbox</a></li>
+</ul>
+<h3 data-number="2.1.1" id="operating-system"><span class="header-section-number">2.1.1</span> Operating system</h3>
+<p>“In theory” PIGLE “should” work on any operating system <a href="https://uk.mathworks.com/support/requirements/matlab-system-requirements.html">officially supported by Matlab/Simulink</a>. In practice I have successfully run PIGLE on</p>
+<ul>
+<li>Windows 10 Pro (I assume Windows 11 will also work) with Matlab R2022a</li>
+<li>Ubuntu 22.04 LTS (not officially supported but does work) Matlab R2022a</li>
+</ul>
+<p>Older version of Matlab down to at least R2017b should work but have not been tested.</p>
+<p>Officially “supported” Ubuntu 20.04 has issues out of the box when running Simulink due to incompatibilities between compiler versions. Unfortunately I do not have access to a MacOS system to test.</p>
+<h2 data-number="2.2" id="getting-pigle"><span class="header-section-number">2.2</span> Getting PIGLE</h2>
+<p>The permanent record of PIGLE is stored in a <a href="http://doi.org/10.5281/zenodo.2025809">Zenodo repository</a> while the up-to-date development version is kept on the <a href="https://github.com/Cambridge-Atom-Scattering-Centre/PIGLE">Cambrideg Atom Scattering Centre github</a>. At present it is recommended to use the version on GitHub and to use the branch <code>develop</code>. Click on the dropdown menu to see the list of available branches to choose <code>develop</code>.</p>
+<figure>
+<img src="change_branch.png" alt="Changing branch on GitHub. It is recommended to use the ‘develop’ branch." /><figcaption aria-hidden="true">Changing branch on GitHub. It is recommended to use the ‘develop’ branch.</figcaption>
+</figure>
+<p>Once on the correct branch the code may be downloaded by clicking the “Code” dropdown menu and selecting “download zip”. Alternativly <code>git</code> may be used to download the code by running the command<br />
+<code>git clone https://github.com/Cambridge-Atom-Scattering-Centre/PIGLE.git</code><br />
+followed by<br />
+<code>git checkout develop</code></p>
+<h1 data-number="3" id="running-pigle"><span class="header-section-number">3</span> Running PIGLE</h1>
+<p>The basic steps in running PIGLE are:</p>
+<ol type="1">
+<li>(optional) Generate a potential and save it as a <code>mat</code> file.</li>
+<li>Configure the parameters for your adsorbates and surface in the <code>.m</code> files under the subfolder “UI”</li>
+<li>Run the main script <code>run_pigle.m</code></li>
+<li>(optional) Use additional scripts for plotting and analysis.</li>
+</ol>
+<p>When you first download PIGLE the simulation will be set up for the motion of CO molecules on a Cu(111) surface that are measured by the Cambridge He3 Spine-Echo machine. Therefore you can test run PIGLE before changing the parameters for your system (see setting parameters below).</p>
+<h1 data-number="4" id="setting-parameters"><span class="header-section-number">4</span> Setting parameters</h1>
+<p>With the exception of the potential energy surface the parameters for a PIGLE simulation are specified in three <code>.m</code> files found in the “UI” subfolder. Modify the parameters by changing the value of Matlab variables in these files.</p>
+<p>There are many parameters that are ‘true/false’ or ‘on/off’ options, in general these use the C convention of <code>1</code> being true/on and <code>0</code> being false/off.</p>
+<p>List of files including parameters:</p>
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>prep_environment.m</code></td>
+<td>Defines paths for PIGLE and data saving</td>
+</tr>
+<tr class="even">
+<td><code>pigle_wrapper_params.m</code></td>
+<td>Non-scientific general parameters, e.g. plotting.</td>
+</tr>
+<tr class="odd">
+<td><code>pigle_ui.m</code></td>
+<td>Key scientific simulation parameters.</td>
+</tr>
+<tr class="even">
+<td><code>pigle_ui_surface_params.m</code></td>
+<td>Parameters for the surface and the adsorbates.</td>
+</tr>
+<tr class="odd">
+<td><code>params_for_function_ prepare_potential.m</code></td>
+<td>Specifying a potential for PIGLE to interpolate.</td>
+</tr>
+<tr class="even">
+<td><code>prepare_params_for_ interactions.m</code></td>
+<td>Define adsorbate-adsorbate interactions.</td>
+</tr>
+<tr class="odd">
+<td><code>params_for_pos_depended_ spatial_friction.m</code></td>
+<td>Can be used to create a spatial dependence of the friction.</td>
+</tr>
+<tr class="even">
+<td><code>params_for_pos_depended_ spatial_theta_friction.m</code></td>
+<td>Can be used to create a spatial dependence of the rotational friction.</td>
+</tr>
+<tr class="odd">
+<td><code>config_job_params.m</code></td>
+<td>HPC use parameters.</td>
+</tr>
+</tbody>
+</table>
+<h2 data-number="4.1" id="data-path"><span class="header-section-number">4.1</span> Data path</h2>
+<p>The current process for setting the data path is convoluted and I haven’t fully got my head round the best way to set your own data path, however when <code>run_pigle.m</code> is run text appears at the command prompt stating where the data file is being saved.</p>
+<h2 data-number="4.2" id="wrapper-parameters"><span class="header-section-number">4.2</span> Wrapper parameters</h2>
+<p><code>pigle_wrapper_params.m</code></p>
+<p>The wrapper parameters are related to the running and output of the simultion, they do not change what is actually simulated.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Possible values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>isISF</code></td>
+<td>1/0</td>
+<td>should an ISF be calcuated?</td>
+</tr>
+<tr class="even">
+<td><code>isSave</code></td>
+<td>1/0</td>
+<td>should the results be saved?</td>
+</tr>
+<tr class="odd">
+<td><code>ISF2save</code></td>
+<td>list, 1/2</td>
+<td>save the 1-incoherent ISF, 2-coherent</td>
+</tr>
+<tr class="even">
+<td><code>toPlot</code></td>
+<td>1/0</td>
+<td>should plots of the results be made</td>
+</tr>
+<tr class="odd">
+<td><code>reduceData</code></td>
+<td>2/1/0</td>
+<td>reduce the amount of data saved (0=keep all)</td>
+</tr>
+<tr class="even">
+<td><code>clearParams</code></td>
+<td>1/0</td>
+<td>clear previous parameters file</td>
+</tr>
+</tbody>
+</table>
+<h2 data-number="4.3" id="simulation-parameters"><span class="header-section-number">4.3</span> Simulation parameters</h2>
+<p><code>pigle_ui.m</code></p>
+<p>Here the main simulation parameters are defined.</p>
+<h3 data-number="4.3.1" id="overall-simulation-parameters"><span class="header-section-number">4.3.1</span> Overall simulation parameters</h3>
+<p>The first section of parameters define the overall simulation to be performed, some of these are scientific and some are practical. Key <em>scientific</em> options are should <em>rotations be included</em>, should <em>z motion be included</em>, and the <em>initial momentum</em> of the adsorbate (0 or thermal).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Possible values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>z_enabled</code></td>
+<td>1/0</td>
+<td>include z motion of adsorbates?</td>
+</tr>
+<tr class="even">
+<td><code>dKz_include_in_isf</code></td>
+<td>1/0</td>
+<td>calculate a <span class="math inline">\(\Delta K\)</span> perpendicular ISF?</td>
+</tr>
+<tr class="odd">
+<td><code>theta_enables</code></td>
+<td>1/0</td>
+<td>include adsorbate rotations?</td>
+</tr>
+<tr class="even">
+<td><code>zero_p_init</code></td>
+<td>1/0</td>
+<td>set the initial momentum to be 0 or thermal</td>
+</tr>
+<tr class="odd">
+<td><code>N_runs</code></td>
+<td>+ve integer</td>
+<td>how many runs of the simulation to perform</td>
+</tr>
+<tr class="even">
+<td><code>run_parallel</code></td>
+<td>1/0</td>
+<td>should parallel computing be used?</td>
+</tr>
+</tbody>
+</table>
+<h3 data-number="4.3.2" id="delta-k-azimuth"><span class="header-section-number">4.3.2</span> Delta K &amp; azimuth</h3>
+<p>The next set of parameters specify the the <span class="math inline">\(\Delta K\)</span>s to be use in the simulation and two azimuths to simulate. The <span class="math inline">\(\Delta K\)</span>s are specified in a Matlab array of all desired <span class="math inline">\(\Delta K\)</span> in units of Å<sup>-1</sup> and the azimuths are defined by 2 element arrays that define azimuthal directions using the crystolographic directions.</p>
+<h3 data-number="4.3.3" id="beam"><span class="header-section-number">4.3.3</span> Beam</h3>
+<p>PIGLE is initially set up to simulate the Cambridge He3 Spin-Echo, therefore the beam parameters, total scattering angle and beam incidence wavevector, only need to be changed if you want to simulate a different machine.</p>
+<h3 data-number="4.3.4" id="time-and-simulation-steps"><span class="header-section-number">4.3.4</span> Time and simulation steps</h3>
+<p>The time and simulation steps may be set via different combinations of variables, either a total time + a time step time, or a time step time + a total number of time steps. The smaller value of the two options will be used by PIGLE.</p>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>sample_time</code></td>
+<td>Time step for the simulation, ps</td>
+</tr>
+<tr class="even">
+<td><code>sample_time_clist</code></td>
+<td>???</td>
+</tr>
+<tr class="odd">
+<td><code>isf_sample_time</code></td>
+<td>ISF time interval, ps</td>
+</tr>
+<tr class="even">
+<td><code>thermalizing_time</code></td>
+<td>Time ignored at the beginning of the simulation to allow thermalisation.</td>
+</tr>
+<tr class="odd">
+<td><code>stop_time</code></td>
+<td>Total simulation time</td>
+</tr>
+<tr class="even">
+<td><code>max_N_steps</code></td>
+<td>Total maximum allowed steps</td>
+</tr>
+<tr class="odd">
+<td><code>max_N_ISF_steps</code></td>
+<td>Total maximum allowed stps in ISF</td>
+</tr>
+</tbody>
+</table>
+<h2 data-number="4.4" id="surface-parameters"><span class="header-section-number">4.4</span> Surface parameters</h2>
+<p><code>pigle_ui_surface_params.m</code><br />
+<code>params_for_function_prepare_potential.m</code></p>
+<p><em>Throughout PIGLE the initialism PES is used to refer to a potential energy surface.</em></p>
+<p>There are two ways to specify the adsorbate-surface potential in PIGLE: either the potential may be generated externally, saved as a <code>.mat</code> file then imported into the correct structure; or heights of specific points on the potential surface may be specified and then PIGLE will interpolate using Fourier components in between them. A full description</p>
+<h3 data-number="4.4.1" id="pigle-interpolated-pes"><span class="header-section-number">4.4.1</span> PIGLE interpolated PES</h3>
+<p>Built into PIGLE is an interpolation function to generate a PES for a close packed hexagonal surface. Four heights and two slopes are needed to specify a close packed surface, they are demonstrated on the figure below.</p>
+<figure>
+<img src="potential_specification.png" alt="The locations of the six potential values needed for PIGLE to interpolate a PES." /><figcaption aria-hidden="true">The locations of the six potential values needed for PIGLE to interpolate a PES.</figcaption>
+</figure>
+<p>These six parameters need to be specified as a column vector in the file <code>params_for_function_prepare_potential.m</code> as <code>pot_strct(i).V</code>, where <code>pot_strct(i)</code> is the a Matlab structure containing all the information on the potential, <code>i</code> means we are setting the potential for the <em>i</em>th species on the surface, and <code>.V</code> means we are specifying the potential values.</p>
+<p>If <em>z</em> motion is being considered then the parameters for a Morse potential,<br />
+<span class="math display">\[
+V(r) = D_e\left[1 - e^(-a(r-r_e))\right]^2,
+\]</span><br />
+need to be specified at each point as well as the potential height. In the specification of the potential all <strong>potential values are in meV</strong> and all <strong>position values are in Angstroms</strong>.</p>
+<p>The total code for specifying a potential is shown below,</p>
+<pre><code>pot_strct(i).ref_De = [top; slope1; slop2; bridge; hcp; fcc];
+pot_strct(i).V = [top; slope1; slop2; bridge; hcp; fcc];
+pot_strct(i).a = [top; slope1; slop2; bridge; hcp; fcc];
+pot_strct(i).r_e = [top; slope1; slop2; bridge; hcp; fcc];
+
+pot_strct(i).is_potval = [1 0 0 1 1 1];
+pot_strct(i).f_2D = @hexagonal6interp;</code></pre>
+<p><code>hexagonal6interp</code> is the function that performs Fourier interpolation between the given potential values to produce a PES and <code>is_potval</code> should not need to be edited.</p>
+<p>If more than one adsorbate species is being simulated then PES need to be defined for every adsorbate species and added to the array of potentials <code>pot_strct</code>.</p>
+<p>A very similar specification to that used for the PES is used to define position dependent friction (spatial and theta) in the files:<br />
+<code>params_for_pos_depended_spatial_friction.m</code><br />
+<code>params_for_pos_depended_spatial_theta_friction.m</code><br />
+A struct called <code>friction_strct(i)</code> is constructed for each species on the surface with the same set of member variables: <code>ref_De</code>, <code>V</code>, <code>a</code>, <code>r_e</code>, <code>f_2D</code>, and <code>is_potval</code>.</p>
+<h3 data-number="4.4.2" id="specifying-your-own-pes"><span class="header-section-number">4.4.2</span> Specifying your own PES</h3>
+<p>…</p>
+<h1 data-number="5" id="a-pigle-exercise"><span class="header-section-number">5</span> A PIGLE exercise</h1>
+<p>This is a very short exercise in running a PIGLE simulation and looking at the data. A more detailed exercise in PIGLE can be found as assignments 13 and 14 part of the Cambridge Atom Scattering Centre <a href="https://atomscattering.phy.cam.ac.uk/resources/educational-package/">Educational Package</a>, alternatively you may wish to get on with simulating your system after this brief introduction.</p>
+</body>
+</html>
