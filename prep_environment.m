@@ -16,7 +16,7 @@ global isGraphicOn
 %% Define user customaized functions or scripts for the simulation environment
 
 % data_path_script_name is called (if not set to empty string), to provide 
-data_path_script_name = '';%'make_data_path.m'; % set to empty if irrelevant
+data_path_script_name = 'make_data_path.m'; % set to empty if irrelevant
 
 isGraphicOn = usejava('desktop');
 
