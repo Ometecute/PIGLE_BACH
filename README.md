@@ -5,14 +5,14 @@ This file is part of the PIGLE - Particles Interacting in Generalized Langevin E
 # PIGLE
 
 PIGLE - Particles Interacting in Generalized Langevin Equation simulator  
-Release: 1.0rc1 (a - alpha , b - beta, rc - release candidate)  
+Release: 1.1a (a - alpha , b - beta, rc - release candidate)
 Please cite PIGLE software using [doi://10.1016/j.cpc.2019.04.013](doi://10.1016/j.cpc.2019.04.013)
 
 PIGLE simulator solves the Generalized Langevin Equation for interacting particles, in a 4D potential energy surface. The potential has up to 3 spatial dimensions, and a rigid-body like rotation. Particles doesn't neceseraly share the same properties (such as mass or friction). When the third spatial dimension ('z') is enabled, the user can choose either constant pressure (where desorbing particles re-appear at the system), or in simple mode where desorbing particles are being frozen for later filtration. However, currently there is not much physical use for that feature, and it might be removed in future releases. Following the calculation of the particles trajectories, each particle (center of mass) can be replaced with a configuration of particles, for example an eight memeber ring of equally contributing scattering centers. Such an approach allows the calculations of the intermediate scattering function with a less simplified representation of the molecular form factor, and also allows to visualize rotations.
 
 ## Getting started
 
-A more detailed [getting started guide](blob/sam/PIGLE_documentation/sams_pigle_documentation.md) can be found in the "documentation" folder.
+A more detailed [getting started guide](PIGLE_documentation/sams_pigle_documentation can be found in the "documentation" folder.
 
 ### Installation:
 
@@ -47,31 +47,31 @@ PIGLE support parallel computing (via matlab/Simulink support).
 
 **Not up to date**
 
-PIGLE:
-aux_files        config_model.m   generatePES  make_movie.m     pigle_sim               prep_environment.m  run_pigle.m      sweepParams  UI
-benchmark  f_interaction.m  LICENSE.txt  pigle_data.mat  prepare_configuration.m  README.txt          surface_params.m  TODO.txt
+PIGLE:  
+`aux_files        config_model.m   generatePES  make_movie.m     pigle_sim               prep_environment.m  run_pigle.m      sweepParams  UI
+benchmark  f_interaction.m  LICENSE.txt  pigle_data.mat  prepare_configuration.m  README.txt          surface_params.m  TODO.txt`
 
-./aux_files:
-calc_kinetic_energy.m    calculate_sim_params.m                        generate_A_from_function.m  make_data_path.m  resample_data.m  timeinput.m
-calculate_average_isf.m  generate_A_from_frequencies_multiple_gamma.m  hlp_f.m                     prepFuncs.m       sim_gle_nd.m
+./aux_files:  
+`calc_kinetic_energy.m    calculate_sim_params.m                        generate_A_from_function.m  make_data_path.m  resample_data.m  timeinput.m
+calculate_average_isf.m  generate_A_from_frequencies_multiple_gamma.m  hlp_f.m                     prepFuncs.m       sim_gle_nd.m`
 
-./benchmark:
-analytic_gle.m  analytic_le.m  benchmark_biexp_gle.m  biexp_gle_isf.m  incoh_brownian_rot.m  incoh_langevin_rot.m  plot_diffusion_models.m
+./benchmark:  
+`analytic_gle.m  analytic_le.m  benchmark_biexp_gle.m  biexp_gle_isf.m  incoh_brownian_rot.m  incoh_langevin_rot.m  plot_diffusion_models.m`
 
-./generatePES:
-loadPES.m  params_for_function_prepare_potential.m  PES_library  prepare_potential.m
+./generatePES:  
+`loadPES.m  params_for_function_prepare_potential.m  PES_library  prepare_potential.m`
 
-./generatePES/PES_library:
-hexagonal6interp.m  hexagonal.m
+./generatePES/PES_library:  
+`hexagonal6interp.m  hexagonal.m`
 
-./pigle_sim:
-create_model.m  delete_unconnected_lines.m  sl_interactions.slx  sl_pigle_Population.slx
-10.1016/j.cpc.2019.04.013
-./sweepParams:
-config_job.m  config_job_params.m  pigle_run_single_task.m  pigle_shell_params.m  run_job.m
+./pigle_sim:  
+`create_model.m  delete_unconnected_lines.m  sl_interactions.slx  sl_pigle_Population.slx`
 
-./UI:
-pigle_ui.m  pigle_ui_surface_params.m  pigle_wrapper_params.m
+./sweepParams:  
+`config_job.m  config_job_params.m  pigle_run_single_task.m  pigle_shell_params.m  run_job.m`
+
+./UI:  
+`pigle_ui.m  pigle_ui_surface_params.m  pigle_wrapper_params.m`
 
 
 
