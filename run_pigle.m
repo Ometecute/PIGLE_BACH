@@ -3,16 +3,17 @@
 % This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the 
 % GNU/GPL-3.0-or-later.
 
+clear global
+
 global data_file
-%global data_path
+global data_path
 %global sub_job_path
-%global pigle_path
+global pigle_path
 global proj_name
 global isGraphicOn
 %global data_path_script_name
 
-if ~exist('proj_name','var') || ...
-   (exist('proj_name','var') && isempty(proj_name))
+if ~exist('proj_name','var') || (exist('proj_name','var') && isempty(proj_name))
         prep_environment;
 end
 
@@ -132,9 +133,9 @@ disp('PIGLE: save done')
 
 if toPlot && isISF
     % Plot the data:
-    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_c(i,:,1))); hold on; end
+    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_c_CoM(i,:,1))); hold on; end
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Coherent ISF, 1st azimuth')
-    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_inc(i,:,1))); hold on; end
+    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_inc_CoM(i,:,1))); hold on; end
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Incoherent ISF, 1st azimuth')
 end
 

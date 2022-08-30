@@ -27,5 +27,5 @@ pot_strct(1).f_2D = @hexagonal6interp;
 
 %% Pot 2
 
-%pot_strct(2) = pot_strct(1);
+pot_strct(2) = pot_strct(1);
 %pot_strct(2).V = [exp(15*number_density(2))-1 ; 0.5 ; 0.5 ; 240 ; 270 ; 280]; % top, slope1,slop2,bridge,hcp,fcc

@@ -1,13 +1,13 @@
 
 %% params for surface_params.m
-T=140;
-Nprtcl_total = 3;
-mass_list = [16 16];
-radius = [0.2 1.5];
-number_density = 0.01*[2 1];
-eta =4 ; eta2=4;
-eta_theta = 6; eta_theta2 = 6;
-tau = [1];
+T=300;              % Surface temperature
+Nprtcl_total = 30;  % Total number of adsorbates
+mass_list = [16 16];% Mass list (amu) of the adsorbate species
+radius = [0.2 1.5]; % Radii of the adsorbates (relavent only for when rotations are included)
+number_density = 0.01*[2 1]; % Number density of each adsorbate
+eta =4 ; eta2=4;    % The friction term "gamma"
+eta_theta = 6; eta_theta2 = 6; % The rotational friction term
+tau = [1];          % Related to the time-dependence of the translational friction
 
 a1=3.6147/sqrt(2);                          % Copper 111 lattice constant in Angstrom
 %a1=2.71;                          % Ru 0001 lattice constant in Angstrom
@@ -17,8 +17,10 @@ z0 = 0; nz = 20; zdim = 10;                 % z dimention params of the unitcell
 theta0 = 0; ntheta = 20; thetadim = 2*pi/6; % theta dimention params of the unitcell/PES
 numOfPrmtvCells = [1 2]; % How many primitive cells exist in the XY potential
 
+% Create a unit cell
 unitcell = prepFuncs.make_unitcell([nx xdim x0],[ny ydim y0],'z',[nz zdim z0 z_enabled],'theta',[ntheta thetadim theta0 theta_enabled],'numOfPrmtvCells',numOfPrmtvCells);
 
+% Calculate the moment of inertia of the adsorbates for rotational motion
 angular_mass_list = mass_list.*radius.^2;
 
 Nmass = length(mass_list);
