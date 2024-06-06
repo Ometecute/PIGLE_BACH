@@ -182,13 +182,12 @@ position=[1,4,7,2,5,3, 2,5,3, 8,7,5, 6,5,3, 8,7,5, 5];
 %     5   5
 %       3
 
-
 for temp_ang=1:num_ang
     for temp_pos=1:num_pos
        potential_mat(temp_pos,temp_ang)=pot_vals(position(temp_ang,temp_pos));
     end
 end
-
+%%
 ynew = [0:4]*ac/4;
 xnew = [0:2]*a/4;
 xypos = [xnew(1),ynew(1);xnew(1),ynew(3);xnew(1),ynew(5);xnew(2),ynew(2);...
@@ -199,13 +198,33 @@ xypos = [xnew(1),ynew(1);xnew(1),ynew(3);xnew(1),ynew(5);xnew(2),ynew(2);...
     xnew(2),-ynew(2);xnew(3),-ynew(3);xnew(2),-ynew(4);...
     xnew(3),-ynew(1)];
 
-% figure
-% plot([-2 2 2 -2 -2],[-2 -2 2 2 -2],'k')
-% hold on
-% for i=1:num_pos
-%     text(xypos(i,1),xypos(i,2),num2str(i))
-% end
 
+xypos_ = [xypos;xypos+[a,0];xypos+[a*sin(pi/6),a*cos(pi/6)];xypos+[0,2*a*cos(pi/6)];xypos+[2*a*sin(pi/6),2*a*cos(pi/6)]];
+
+%to plot
+
+figure
+plot(xypos_(:,1),xypos_(:,2),'rx')
+hold on
+for i=1:length(xypos_(:,1))
+    text(xypos_(i,1),xypos_(i,2),num2str(i))
+end
+
+potential_mat_ = [potential_mat;potential_mat;potential_mat;potential_mat;potential_mat];
+
+
+xn_ = linspace(0,a,120);
+yn_ = linspace(0,2*a*cos(pi/6),200);
+[xnew_,ynew_]=meshgrid(xn_,yn_);
+znew_=griddata(xypos_(:,1),xypos_(:,2),potential_mat_,xnew_,ynew_,'cubic');
+figure
+mesh(xnew_,ynew_,znew_)
+
+PES4D_AQ = znew_;
+special_file='loadPESspecial.mat';
+save(special_file, 'PES4D_AQ');
+
+%%
 weight = [1,1,1/3,1,1/2,1/3, 1,1/2,1/3, 1,1/3,1/2, 1,1/2,1/3, 1,1/3,1/2, 1/2]';
 thetapos = [0];
 
@@ -215,10 +234,11 @@ potential_mat(:,((num_ang/2)+1):num_ang)=potential_mat(:,1:(num_ang/2));
 
 V3Dinterp_AQ=potential_mat;
 
- xn=linspace(min(xypos(:,1)),max(xypos(:,1)),201);
-    yn=linspace(min(xypos(:,2)),max(xypos(:,2)),201);
-    [xnew,ynew]=meshgrid(xn,yn);
-    znew=griddata(xypos(:,1),xypos(:,2),V3Dinterp_AQ,xnew,ynew,'cubic');
+xn=linspace(min(xypos(:,1)),max(xypos(:,1)),201);
+yn=linspace(min(xypos(:,2)),max(xypos(:,2)),201);
+[xnew,ynew]=meshgrid(xn,yn);
+znew=griddata(xypos(:,1),xypos(:,2),V3Dinterp_AQ,xnew,ynew,'cubic');
+
 figure
 mesh(xnew,ynew,znew)
 general_file='Potential_AQ_base_file.mat';
