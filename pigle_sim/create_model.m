@@ -5,7 +5,7 @@
 
 % to be executed from PIGLE root folder
 close_system('sl_pigle_main_current',0);
-if exist('sl_pigle_main_current.slx','file')
+if exist('sl_pigle_main_current.slx','file')==2
     delete sl_pigle_main_current.slx;
 end
 

@@ -32,7 +32,7 @@ for idx = 1:length(sfBuilderBlocks)
 end
 sfBuilderBlockNameMATFile = unique(sfBuilderBlockNameMATFile);
 for idx = 1:length(sfBuilderBlockNameMATFile)
-   if exist(sfBuilderBlockNameMATFile{idx}, 'file')
+   if exist(sfBuilderBlockNameMATFile{idx}, 'file')==2
       loadedData = load(sfBuilderBlockNameMATFile{idx});
       if isfield(loadedData,'SFBInfoStruct')
          makeInfo = UpdateMakeInfo(makeInfo,loadedData.SFBInfoStruct);
