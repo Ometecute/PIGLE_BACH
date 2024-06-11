@@ -157,8 +157,8 @@ end
 %% For Pigle by rewriting EduPackage Assignment 13 file1/file2_interp
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Potential Values, Positions are equivalent to 1 through 9 from above
-pot_vals =[-0.5586935 -0.5551354 -0.5595238 -0.5377014 -0.5477704 -0.5543138 -0.5071325 -0.5385249 -0.5605814]*(-1000);
-
+pot_vals =[-0.5586935 -0.5551354 -0.5595238 -0.5377014 -0.5477704 -0.5543138 -0.5071325 -0.5385249 -0.5605814]*(1000);
+pot_vals = pot_vals - min(pot_vals);
 
 %% parameters
 
@@ -170,8 +170,8 @@ new_file='Potential.mat';
 
 
 %%  map positions to new system
-position=[1,4,7,2,5,3, 2,5,3, 8,7,5, 6,5,3, 8,7,5, 5];
-%position=[7,5,3,8,2,9, 8,2,9, 5,3,6, 4,2,1, 5,3,2, 6];
+% position=[1,4,7,2,5,3, 2,5,3, 8,7,5, 6,5,3, 8,7,5, 5];
+position=[7,5,3,8,2,9, 8,2,9, 5,3,6, 4,2,1, 5,3,2, 6];
 %       7
 %     5   5
 %    3  4  3
@@ -217,9 +217,9 @@ xn_ = linspace(0,a,120);
 yn_ = linspace(0,2*a*cos(pi/6),200);
 [xnew_,ynew_]=meshgrid(xn_,yn_);
 znew_=griddata(xypos_(:,1),xypos_(:,2),potential_mat_,xnew_,ynew_,'cubic');
-figure
-mesh(xnew_,ynew_,znew_)
-
+figure(10)
+%mesh(xnew_,ynew_,znew_)
+stest = contourf(xnew_,ynew_,znew_); axis equal;
 PES4D_AQ = znew_;
 special_file='loadPESspecial.mat';
 save(special_file, 'PES4D_AQ');
@@ -239,7 +239,7 @@ yn=linspace(min(xypos(:,2)),max(xypos(:,2)),201);
 [xnew,ynew]=meshgrid(xn,yn);
 znew=griddata(xypos(:,1),xypos(:,2),V3Dinterp_AQ,xnew,ynew,'cubic');
 
-figure
+figure(11)
 mesh(xnew,ynew,znew)
 general_file='Potential_AQ_base_file.mat';
 save(general_file, 'V3Dinterp_AQ',"xypos","thetapos","weight");
