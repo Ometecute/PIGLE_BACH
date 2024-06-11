@@ -4,7 +4,7 @@
 
 z_enabled = 0;          % Should z motion be enabled
 dKz_include_in_isf = 0; % Calculated the dK perpendicular ISF
-theta_enabled = 0;      % Should rotational motion of the adsorbates be included
+theta_enabled = 1;      % Should rotational motion of the adsorbates be included
 zero_p_init = 0;        % set initial momentum be set to zero? (if set to 0, p_init will correspond to thermal distribution)
 interactions_active = 0;% Should rotational motion of the adsorbates be included
 N_runs = 1;             % How many runs of the simultion to perform 

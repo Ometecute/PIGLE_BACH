@@ -2,14 +2,14 @@
 %% params for surface_params.m
 T=100;              % Surface temperature
 Nprtcl_total = 10;  % Total number of adsorbates
-mass_list = [80];% Mass list (amu) of the adsorbate species
-radius = [0.2]; % Radii of the adsorbates (relavent only for when rotations are included)
+mass_list = [300];% Mass list (amu) of the adsorbate species
+radius = [4.263]; % Radii of the adsorbates (relavent only for when rotations are included)
 number_density = [0.05]; % Number density of each adsorbate
 eta =2 ; eta2=4;    % The friction term "gamma"
 eta_theta = 6; eta_theta2 = 6; % The rotational friction term
 tau = [1];          % Related to the time-dependence of the translational friction
 
-a1=2.467;                          %graphene lattice in Angstrom
+a1=2.461;                          %graphene lattice in Angstrom
 %a1=2.71;                          % Ru 0001 lattice constant in Angstrom
 x0 = 0; nx = 120; xdim = a1;                 % x dimention params of the unitcell/PES
 y0 = 0; ny = 200; ydim = a1*sqrt(3.0);       % y dimention params of the unitcell/PES
@@ -122,7 +122,7 @@ PES_func_list = {@loadPES};
 
 % Define the arguments for PES generation.
 %PES_arg_list = {unitcell, pot_strct(1);unitcell, pot_strct(2)};
-PES_arg_list = {'loadPES_py_1.1.mat','PES4D_AQ'};
+PES_arg_list = {'loadPES_cor.mat','PES4D_AQ'};
 %% Parameters for Interactions
 
 prepare_params_for_interactions
