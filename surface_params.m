@@ -10,17 +10,18 @@
 % all the relevant information.
 
 %% Pre-defined variables
+pigle_ui_surface_params
 
 % override/add if supp_surface_params.m exists
 % This option is used (for example) when generating multi-run job (for
 % probing a parameter space).
-if exist([pwd '/supp_surface_params.m'],'file')
+if exist([pwd '/supp_surface_params.m'],'file')==2
     supp_surface_params
 else
     disp(['No supp_surface_params.m at ' pwd])
 end
 
-pigle_ui_surface_params
+
 
 params.T = T; % Temperature / K
 
@@ -187,7 +188,7 @@ if ~exist('PES_arg_list','var')
     disp('PES_arg_list is not defined. Assuming PES_arg_list={params.unitcell, pot_strct(1); params.unitcell, pot_strct(1)}')
     
     % Define variables to hold the arguments which are stored in PES_arg_list (see below)
-    if exist('params_for_function_prepare_potential','file')
+    if exist('params_for_function_prepare_potential','file')==2
         params_for_function_prepare_potential;
     end
     PES_arg_list = {params.unitcell, pot_strct(1); ...

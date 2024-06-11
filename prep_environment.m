@@ -16,14 +16,14 @@ global isGraphicOn
 %% Define user customaized functions or scripts for the simulation environment
 
 % data_path_script_name is called (if not set to empty string), to provide 
-data_path_script_name = 'make_data_path.m'; % set to empty if irrelevant
+data_path_script_name = ''; %'make_data_path.m'; % set to empty if irrelevant
 
-isGraphicOn = usejava('desktop');
+isGraphicOn = false;%usejava('desktop');
 
 %% Define path of PIGLE and Project name
 
 pigle_path = pwd;
-if ~exist('run_pigle.m','file')
+if ~(exist('run_pigle.m','file')==2)
    if isGraphicOn
       pigle_path = uigetdir('','Select the correct path for pigle_path');
    else

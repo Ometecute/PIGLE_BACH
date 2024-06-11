@@ -153,7 +153,7 @@ classdef prepFuncs
             
             % First priority, check if data_path is defined in md_data_file (expected for
             % sweepParams multi-run job)        
-            if exist([sub_job_path '/md_data_file.mat'],'file')
+            if exist([sub_job_path '/md_data_file.mat'],'file')==2
                 disp('loading md_data_file.mat into data_file (global var)')
                 load([sub_job_path '/md_data_file.mat'],'data_file_path')
                 data_file = data_file_path;
@@ -162,23 +162,27 @@ classdef prepFuncs
             % Otherwise, if data_path_script_name is defined (see prep_environment), workout the data_path
             % using user specific script - the script is expected to define
             % data_file and data_path
-            elseif exist('data_path_script_name','var') && ~isempty(data_path_script_name) && exist(data_path_script_name,'file')
+            elseif exist('data_path_script_name','var') && ~isempty(data_path_script_name) && exist(data_path_script_name,'file')==2
                 if verbal, disp('data_path_script_name exist'); end
                 run(data_path_script_name);
                 
             % If nothing else, assume a scratch folder (or similar), and
             % save in monotonically increasing file identifiers for md_local_<serial number>.mat
             else
-                if exist('~/rds/hpc-work','dir')
+                if exist(proj_name,'dir')==7
+                    data_path = proj_name;
+                elseif exist('~/rds/hpc-work','dir')==7
                     data_path = '~/rds/hpc-work';
-                elseif exist('~/scratch','dir')
+                elseif exist('~/scratch','dir')==7
                     data_path = '~/scratch';
-                elseif exist('/tmp','dir')
-                    data_path = '/tmp/';
+                elseif exist('tmp','dir')==7
+                    data_path = 'tmp';
+                    
                 else
                     data_path = '';
                 end
-                
+                if ~isempty(data_path), cd(data_path), end
+
                 % convert symbolic links to the actual path
                 if ~ispc
                     [~,b]=system(['readlink -f ' data_path]);
@@ -188,7 +192,7 @@ classdef prepFuncs
                 
                 serstr = sprintf('%.6d',serial);
                 filename = ['md_local_' serstr '.mat'];
-                data_file = [data_path '/' filename];
+                data_file = [filename];
                 if ispc && isempty(data_path), data_file = filename; end
                 filetime.creation=fix(clock);
                 save(data_file,'filetime');                
@@ -203,7 +207,7 @@ classdef prepFuncs
                 C = strsplit(str,'md_local_'); c = strsplit(C{2},'.');
                 d(i)=str2num(c{1});
             end
-            if ~exist('d') d=0; elseif isempty(d), d=0; end
+            if ~exist('d'), d=0; elseif isempty(d), d=0; end
             serial = max(d)+1;
         end
         

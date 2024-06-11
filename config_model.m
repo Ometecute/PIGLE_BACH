@@ -56,7 +56,7 @@ params.model_dim = 4-(~params.z_enabled)-(~params.theta_enabled);
 if params.run_parallel ~= 0
     c = parcluster('local'); % build the 'local' cluster object
     jobStorageLocation = [pwd '/tmp_cluster_data'];
-    if ~exist(jobStorageLocation,'dir'), mkdir(jobStorageLocation); end
+    if ~(exist(jobStorageLocation,'dir')==7), mkdir(jobStorageLocation); end
     c.JobStorageLocation = jobStorageLocation;
     params.n_parall_runs = c.NumWorkers; % get the number of workers
 else
@@ -123,6 +123,6 @@ if params.zero_p_init == 1, disp('initial momentum is set to 0'); end
 params = prepFuncs.p_init(params);
 
 %%
-if exist('./pigle_data.mat','file'), disp('pigle_data.mat exists. DELETING'); delete pigle_data.mat; end
+if exist('./pigle_data.mat','file')==2, disp('pigle_data.mat exists. DELETING'); delete pigle_data.mat; end
 save('pigle_data.mat', 'params');
 assignin('base', 'params', params);

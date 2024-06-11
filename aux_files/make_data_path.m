@@ -6,10 +6,10 @@ global proj_name
 global data_path
 global verbal
 
-if ~exist('CustomFuncs','file')
+if ~(exist('CustomFuncs','file')==2)
     error('make_data_path:ERROR: CustomFuncs.m does not exist')
 end
-if ~exist(CustomFuncs.find_data_path(proj_name),'dir')
+if ~(exist(CustomFuncs.find_data_path(proj_name),'dir')==7)
     error('make_data_path:ERROR: cannot find project data (directory) path')
 end
     

@@ -3,15 +3,15 @@
 % This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the 
 % GNU/GPL-3.0-or-later.
 
-clear global
+%clear global
 
 global data_file
 global data_path
-%global sub_job_path
+global sub_job_path
 global pigle_path
 global proj_name
 global isGraphicOn
-%global data_path_script_name
+global data_path_script_name
 
 if ~exist('proj_name','var') || (exist('proj_name','var') && isempty(proj_name))
         prep_environment;
@@ -51,9 +51,9 @@ end
 
 %% Config the model (create params variable)
 
-if (exist('clearParams','var') && clearParams) || ~exist('clearParams','var')
+if (exist('clearParams','var') && clearParams) || ~exist('params','var')||~(exist('./pigle_data.mat','file')==2)
     clear params clearParams
-    if exist('./pigle_data.mat','file')
+    if exist('./pigle_data.mat','file')==2
         delete 'pigle_data.mat'
     end
     config_model
@@ -108,7 +108,7 @@ end
 %% Post computation tasks: Save, Plot, local function
 
 if isSave
-    if ~exist(data_file,'file')
+    if ~(exist(data_file,'file')==2)
         save(data_file,'params','data');    
     else
         save(data_file,'params','data','-append');
