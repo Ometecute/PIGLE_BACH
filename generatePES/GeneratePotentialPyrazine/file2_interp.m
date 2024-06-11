@@ -4,7 +4,7 @@ clear;
 % load in Potential.mat
 %--------------------------------------------------------------------------
 
-load('Potential.mat');
+load('Potential_AQ_base_file.mat');
 % contains: - matrix of grid point (x,y)-positions
 %           - vector of AQ angles
 %           - vector of weights for each point
@@ -25,8 +25,8 @@ end
 
 
 % Number of Interpolation Points for rectangular grid & angle interpolation
-nx=1200;
-ny=2000;
+nx=120;
+ny=200;
 ntheta=2; % to request 30 theta vals., starting at 0, e.g., set ntheta=31 | 2-1=1 if no angular dependency is used
 
 %% define range over which potential will be calculated
@@ -36,7 +36,7 @@ ntheta=2; % to request 30 theta vals., starting at 0, e.g., set ntheta=31 | 2-1=
 ax=2*max(xypos(:,1));
 
 % the maximum y-displacement of the WS cell is half the basic vertical lattice spacing
-ay=3*max(xypos(:,2));
+ay=4*max(xypos(:,2));
 
 % axes are typically chosen such that dir(x) || dir(a1)
 a=ax;
@@ -69,7 +69,7 @@ ntheta=ntheta-1;
 %--------------------------------------------------------------------------
 
 % original integer factor N as defined in the theoretical bckgd
-nscale=6;
+nscale=2;
 
 % use halvespacing() method to double the resolution of V3Dinterp
 [V3Dnew, xyposnew, weightnew, npnew, nscalenew] = halvespacing(V3Dinterp, xypos, weight, np,nscale,a,12);
@@ -85,10 +85,10 @@ nscale=6;
 G1=4*pi/sqrt(3)/a;
 
 % basic vertical reciprocal lattice spacing
-Gx0=3*pi/ax;
+Gx0=2*pi/ax;
 
 % basic vertical reciprocal lattice spacing
-Gy0=8*pi/ay;
+Gy0=2*pi/ay;
 
 %this gives twice the point spacing in the original grid
 
@@ -183,7 +183,7 @@ for iGp=1:nGp
     for itheta=1:ntheta
         dum=0.0;
         for ip=1:npnew  % sum weighted contributions of each Fourier component
-    dum=dum+V3Dnew(ip,itheta)*exp(-1i*(Gxp(iGp)*xyposnew(ip,1)+Gyp(iGp)*xyposnew(ip,2)))*weightnew(ip);
+            dum=dum+V3Dnew(ip,itheta)*exp(-1i*(Gxp(iGp)*xyposnew(ip,1)+Gyp(iGp)*xyposnew(ip,2)))*weightnew(ip);
         end
         VGnew(iGp,itheta)=dum/nscalenew/nscalenew;
     end
@@ -197,7 +197,7 @@ pe3D=zeros(nx,ny,ntheta);
 
 for itheta=1:ntheta
 
-clear A
+    clear A
     A=zeros(nx,ny);
     for iGp=1:nGp
         % weight the potential at each point to account for double/treble-counting
@@ -205,7 +205,7 @@ clear A
     end
     % take the real (cosine) part so that there is a top site at the origin
     B=real(fft2(A));
-pe3D(:,:,itheta)=B(:,:);
+    pe3D(:,:,itheta)=B(:,:);
 end
 
 %% --------------------------------------------------------------------------
