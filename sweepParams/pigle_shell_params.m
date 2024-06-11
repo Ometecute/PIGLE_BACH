@@ -1,2 +1,2 @@
-job_name = 'job1';
-proj_name = 'noProj';
+job_name = 'TempSweep';
+proj_name = 'Pyrazine';

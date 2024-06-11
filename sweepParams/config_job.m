@@ -5,7 +5,7 @@
 
 global data_file
 global pigle_path
-
+global proj_name
 % CONFIG JOB is a script to create a collection of folders and scripts
 % which then used to run PIGLE over different sets of parameters. In
 % otherwords, to probe a multi-variable space.
@@ -43,7 +43,7 @@ create_params_file('pigle_shell_params.m',{'job_name','proj_name'},{job_name,pro
 % subfolders for every run, config_file named job_name.mat, which contains
 % all the info, and (possibly) more.
 
-if ~exist([pigle_path '/' job_name],'dir'), mkdir([pigle_path '/' job_name]); end
+if ~(exist([pigle_path '/' job_name],'dir')==7), mkdir([pigle_path '/' job_name]); end
 job_path = [pigle_path '/' job_name];
 cd(job_path);
 
@@ -57,7 +57,7 @@ Njobs = size(permutations,2);
 % Find the serial number for the first 'new' (current) sub_job
 % (<job_name>_i), assuming the aim is to add sub jobs (rather replacing sub
 % jobs)
-if exist([job_name '.mat'],'file')
+if exist([job_name '.mat'],'file')==2
     load([job_name '.mat'])
     for i=1:length(sweepParams)
         res(i)=strcmp(job_strct(1).sweepParams{i},sweepParams{i});
@@ -90,12 +90,17 @@ end
 save(job_name,'job_strct')
 
 % create run_job file
-if exist('run_job.m','file'), delete run_job.m; end
+cd(pigle_shell_path)
+if exist('run_job.m','file')==2
+    fid  = fopen('run_job.m','w');
+    fprintf(fid,'%s',' ');
+    fclose(fid)
+end
 [ret, name] = system('hostname');
 name = strtrim(name);
 
-cd(pigle_shell_path)
-fid  = fopen('run_job.m','w');
+
+fid  = fopen('run_job.m','a');
 for i=start_i:(start_i-1)+Njobs
     str1 = ['cd ' job_path '/' job_strct(i).d_name];
     if distributed_computing
@@ -106,8 +111,10 @@ for i=start_i:(start_i-1)+Njobs
     %str3 = ['sleep ' num2str(5*i)];
     fprintf(fid,'%s\n%s\n',str1,str2);
 end
+
 if distributed_computing, fprintf(fid,'%s\n','wait'); end
 fclose(fid);
+cd(pigle_shell_path)
 
 function create_surface_params_file(dirname,sweepParams,perm)
 f_name = [dirname '/supp_surface_params.m'];
