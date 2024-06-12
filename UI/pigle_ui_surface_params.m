@@ -1,12 +1,12 @@
 
 %% params for surface_params.m
-T=100;              % Surface temperature
+T=50;              % Surface temperature
 Nprtcl_total = 10;  % Total number of adsorbates
 mass_list = [300];% Mass list (amu) of the adsorbate species
-radius = [4.263]; % Radii of the adsorbates (relavent only for when rotations are included)
+radius = [4]; % Radii of the adsorbates (relavent only for when rotations are included)
 number_density = [0.05]; % Number density of each adsorbate
 eta =2 ; eta2=4;    % The friction term "gamma"
-eta_theta = 6; eta_theta2 = 6; % The rotational friction term
+eta_theta = 20; eta_theta2 = 2; % The rotational friction term
 tau = [1];          % Related to the time-dependence of the translational friction
 
 a1=2.461;                          %graphene lattice in Angstrom
