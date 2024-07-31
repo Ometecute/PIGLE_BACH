@@ -1,16 +1,18 @@
- cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_14
+ cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_1
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_15
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_2
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_16
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_3
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_17
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_4
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_18
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_5
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_19
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_6
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_20
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_7
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/TempSweep/TempSweep_21
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_8
+sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/SweepTempInt0/SweepTempInt0_9
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')

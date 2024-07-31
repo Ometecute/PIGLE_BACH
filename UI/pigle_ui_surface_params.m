@@ -1,15 +1,21 @@
 
 %% params for surface_params.m
-T=100;              % Surface temperature
-Nprtcl_total = 10;  % Total number of adsorbates
+T=350;              % Surface temperature
+Nprtcl_total = 20;  % Total number of adsorbates
 mass_list = [80];% Mass list (amu) of the adsorbate species
 radius = [0.2]; % Radii of the adsorbates (relavent only for when rotations are included)
-number_density = [0.05]; % Number density of each adsorbate
-eta =2 ; eta2=4;    % The friction term "gamma"
-eta_theta = 6; eta_theta2 = 6; % The rotational friction term
-tau = [1];          % Related to the time-dependence of the translational friction
+number_density = [0.1]./6.0635; % Number density of each adsorbate, Saturation per macrocell
+eta = 1; %eta2=4;    % The friction term "gamma"
+eta_theta = 6; %eta_theta2 = 6; % The rotational friction term
+tau = [10];          % Related to the time-dependence of the translational friction
 
-a1=2.467;                          %graphene lattice in Angstrom
+a1=2.461;  %graphene lattice in Angstrom
+
+unitcell_area = (sqrt(3)/2)*(a1^2);
+a_ML = 6.06; ML_area = (sqrt(3)/2)*(a_ML^2);
+ML = number_density*ML_area/unitcell_area;
+if ML>=1, warning(['There are enough particles to fill ',num2str(ML),' Monolayers, this might make the system unstable']), end
+
 %a1=2.71;                          % Ru 0001 lattice constant in Angstrom
 x0 = 0; nx = 120; xdim = a1;                 % x dimention params of the unitcell/PES
 y0 = 0; ny = 200; ydim = a1*sqrt(3.0);       % y dimention params of the unitcell/PES
@@ -54,7 +60,7 @@ form_factor_hemisphere_radius = {repmat(0.5,r_conf_Natoms{1},1)};
 % populations), or as a cell-array (with the i'th element distributed to the i'th
 % population)
 %
-A_case = {1};
+A_case = {2};  % 1->no, 2 ->low-pass,3->spike,4->bi-low-pass  filters
 A_w0   = {eta};
 A_dw   = {1./tau};
 A_eta  = {eta};
@@ -131,21 +137,23 @@ prepare_params_for_interactions
 % For each pair in f_perm, a function case is defined in f_func. This
 % function case is taken from f_interaction.m - and f_func_params contain
 % the arguments for each function.
-f_perm = [1 1;1 2;2 2];
-f_func = [repmat(1,1,3)];
+f_perm = [1 1];
+f_func = [repmat(1,1,1)];
 %f_func_params = {[fparam1_12 13 fparam1_6 7],[fparam2_12 13 fparam2_6 7],[fparam3_12 13 fparam3_6 7]};
-f_func_params = {[fparam1 4],[fparam2 4],[fparam3 4]};
+
+f_func_params = {[fparam1_12 13 fparam1_6 7]};
 
 % Define the boundaries for interactions:
 % out_cutoff_r - The supercell must be larger than that number (see calculate_sim_params.m).
 %                TODO: include in connection lists, once implemented
 % in_cutoff_r -  the force between particles will be calculated for r >= r_in
-out_cutoff_r = norm(unitcell.celldim)*10*0+49;
-in_cutoff_r = 0.1;
+out_cutoff_r = 6.06*2.5;% norm(unitcell.celldim)*10*0+24;
+ %area for logspace x
+in_cutoff_r = 1;
 
 % x_interactions - the points in which the force is to be calculated
-x_min = in_cutoff_r/10; % in Angstrom
-x_max = out_cutoff_r + 1; % in Angstrom
-numOfPoints_interactions = 500;
+x_min = in_cutoff_r; % in Angstrom
+x_max = out_cutoff_r; % in Angstrom
+numOfPoints_interactions = 1000;
 x_interactions = linspace(x_min, x_max, numOfPoints_interactions); %x_min/max in Angstrom
 

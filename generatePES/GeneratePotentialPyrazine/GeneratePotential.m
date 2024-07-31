@@ -170,7 +170,7 @@ new_file='Potential.mat';
 
 
 %%  map positions to new system
- position=[1,4,7,2,5,3, 2,5,3, 8,7,5, 6,5,3, 8,7,5, 5];
+position=[1,4,7,2,5,3, 2,5,3, 8,7,5, 6,5,3, 8,7,5, 5];
 %position=[7,5,3,8,2,9, 8,2,9, 5,3,6, 4,2,1, 5,3,2, 6];
 %       7
 %     5   5
@@ -242,5 +242,3 @@ znew=griddata(xypos(:,1),xypos(:,2),V3Dinterp_AQ,xnew,ynew,'cubic');
 figure(11)
 mesh(xnew,ynew,znew)
 general_file='Potential_AQ_base_file.mat';
-save(general_file, 'V3Dinterp_AQ',"xypos","thetapos","weight");
-clear;

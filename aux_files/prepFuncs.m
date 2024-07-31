@@ -93,7 +93,7 @@ classdef prepFuncs
                 params.prtcl(i).r_init =  randMat .* celldim';
                 
                 % Equally spaced distribution (overied prev assignment, if required)
-                if 1
+                if 0
                     disp('equally distributed particles')
                     params.prtcl(i).r_init(1:2,:) = r_init(:,1:dim(2));
                     r_init(:,1:dim(2)) = [];
@@ -175,13 +175,14 @@ classdef prepFuncs
                     data_path = '~/rds/hpc-work';
                 elseif exist('~/scratch','dir')==7
                     data_path = '~/scratch';
-                elseif exist('tmp','dir')==7
+                elseif isdir('tmp')
                     data_path = 'tmp';
+                    cd(data_path)
                     
                 else
                     data_path = '';
                 end
-                if ~isempty(data_path), cd(data_path), end
+                
 
                 % convert symbolic links to the actual path
                 if ~ispc
@@ -195,7 +196,9 @@ classdef prepFuncs
                 data_file = [filename];
                 if ispc && isempty(data_path), data_file = filename; end
                 filetime.creation=fix(clock);
-                save(data_file,'filetime');                
+                
+                save(data_file,'filetime'); 
+                
             end
         end
 

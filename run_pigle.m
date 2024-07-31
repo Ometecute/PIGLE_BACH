@@ -51,9 +51,9 @@ end
 
 %% Config the model (create params variable)
 
-if (exist('clearParams','var') && clearParams) || ~exist('params','var')||~(exist('./pigle_data.mat','file')==2)
+if (exist('clearParams','var') && clearParams) || ~exist('clearparams','var')
     clear params clearParams
-    if exist('./pigle_data.mat','file')==2
+    if isfile('pigle_data.mat')
         delete 'pigle_data.mat'
     end
     config_model
@@ -108,7 +108,7 @@ end
 %% Post computation tasks: Save, Plot, local function
 
 if isSave
-    if ~(exist(data_file,'file')==2)
+    if ~isfile(data_file)
         save(data_file,'params','data');    
     else
         save(data_file,'params','data','-append');
@@ -133,10 +133,13 @@ disp('PIGLE: save done')
 
 if toPlot && isISF
     % Plot the data:
-    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_c_CoM(i,:,1))); hold on; end
+    figure; for i=1:size(dK,2), semilogx(params.t_isf',real(isf_c_CoM(i,:,1))); hold on; end
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Coherent ISF, 1st azimuth')
-    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_inc_CoM(i,:,1))); hold on; end
+    figure; for i=1:size(dK,2), semilogx(params.t_isf',real(isf_inc_CoM(i,:,1))); hold on; end
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Incoherent ISF, 1st azimuth')
 end
 
 
+
+load handel
+sound(y,Fs)

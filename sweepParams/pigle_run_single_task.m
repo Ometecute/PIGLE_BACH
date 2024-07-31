@@ -13,7 +13,6 @@ pigle_path = [sub_job_path '/../../'];
 
 cd(pigle_path)
 prep_environment
-
 cd(sub_job_path)
 run('run_pigle.m')
 

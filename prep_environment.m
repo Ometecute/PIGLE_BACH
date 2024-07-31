@@ -22,7 +22,7 @@ isGraphicOn = false;%usejava('desktop');
 
 %% Define path of PIGLE and Project name
 
-pigle_path = pwd;
+pigle_path = 'C:\Users\benno\Documents\MATLAB\BACC\PIGLE';
 if ~(exist('run_pigle.m','file')==2)
    if isGraphicOn
       pigle_path = uigetdir('','Select the correct path for pigle_path');

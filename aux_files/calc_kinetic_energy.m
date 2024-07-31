@@ -39,6 +39,9 @@ function [KE, Rot_KE] = calc_kinetic_energy(data_prtcl,params_prtcl,k_B,z_enable
     end
     KE = reshape(KE,1,[]);
     KE = KE(~isnan(KE));
+    figure;
+    semilogy(2*KE/k_B)
+
     KE = mean(2*KE/k_B)/(2+int16(z_enabled > 0));
     
     if theta_enabled

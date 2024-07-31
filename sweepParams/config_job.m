@@ -94,7 +94,7 @@ cd(pigle_shell_path)
 if exist('run_job.m','file')==2
     fid  = fopen('run_job.m','w');
     fprintf(fid,'%s',' ');
-    fclose(fid)
+    fclose(fid);
 end
 [ret, name] = system('hostname');
 name = strtrim(name);
