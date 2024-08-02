@@ -29,7 +29,7 @@ num_pos=19; % number of potential positions
 xypos=zeros(num_pos,2);
 potential_mat=zeros(num_pos,num_ang);
 new_file='Potential.mat';
-
+N = [200,120,5];%x,y,theta result
 
 %%  map positions to new system (given pot_vals_pos to posittion: 1->1, 2->2, 5->3, 7->4)
 position=[7,5,3,8,2,9, 8,2,9, 5,3,6, 4,2,1, 5,3,2, 6];
@@ -54,7 +54,7 @@ position=[7,5,3,8,2,9, 8,2,9, 5,3,6, 4,2,1, 5,3,2, 6];
 %     5   5
 %       3
 
-% remapping to match to only pot_vals
+% remapping to match to pot_vals
 old = [1,2,3,4,5,6,7,8,9];
 new = [1,2,1,5,5,2,7,5,1];
 position = changem(position,new, old);
@@ -115,22 +115,25 @@ hold off
 
 
 
-x_n = linspace(0,a,120);
-y_n = linspace(0,2*a*cos(pi/6),200);
+x_n = linspace(0,a,N(2));
+y_n = linspace(0,2*a*cos(pi/6),N(1));
+theta_n = linspace(thetavec(1),thetavec(2),N(3));
 
-for i = 1:num_ang
+potential_mat = interp1(thetavec,potential_mat',theta_n)';
+
+for i = 1:N(3)
     [X,Y]=meshgrid(x_n,y_n);
-    pe3D(:,:,i)=griddata(xypos(:,1,i),xypos(:,2,i),potential_mat(:,i),X,Y,'cubic');
+    pe3D(:,:,i)=griddata(xypos(:,1,1),xypos(:,2,1),potential_mat(:,i),X,Y,'cubic');
 end
 
-for i = 1:num_ang
+for i = 1:N(3)
     figure(100+i);
     %stest = surf(X,Y,pe3D(:,:,i)); set(stest,'LineStyle','none'); caxis([color_scale_min color_scale_max]); view([0 90]); daspect(asp); xlim(Lx); ylim(Ly);
-    stest = contourf(X,Y,pe3D(:,:,i)); axis equal; title(sprintf('%d',thetavec(i)));
-    
+    stest = contourf(X,Y,pe3D(:,:,i),linspace(0,300,25)); axis equal; title(num2str(theta_n(i)));
+    clim([0,300])
     %exportgraphics(gcf,sprintf('deg%d.png',round(thetavec(i)*3*(180/pi))),'Resolution','300')
 end
-PES4D_AQ = zeros([size(X),1,num_ang]);
+PES4D_AQ = zeros([N(1),N(2),1,N(3)]);
 PES4D_AQ(:,:,1,:) = pe3D;
 save_file='loadPES_cor.mat';
 save(save_file, 'PES4D_AQ');
