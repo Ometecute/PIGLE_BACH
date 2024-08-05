@@ -29,8 +29,10 @@ num_pos=19; % number of potential positions
 xypos=zeros(num_pos,2);
 potential_mat=zeros(num_pos,num_ang);
 new_file='Potential.mat';
-N = [200,120,5];%x,y,theta result
+N = [200,120,9];%x,y,theta result
 
+
+if mod(N(3),2) ~= 1, error('theta dim should be a non-even Integer'),end
 %%  map positions to new system (given pot_vals_pos to posittion: 1->1, 2->2, 5->3, 7->4)
 position=[7,5,3,8,2,9, 8,2,9, 5,3,6, 4,2,1, 5,3,2, 6];
 %       3
@@ -117,15 +119,15 @@ hold off
 
 x_n = linspace(0,a,N(2));
 y_n = linspace(0,2*a*cos(pi/6),N(1));
-theta_n = linspace(thetavec(1),thetavec(2),N(3));
+theta_n = linspace(thetavec(1),thetavec(2)*2,N(3));
 
-potential_mat = interp1(thetavec,potential_mat',theta_n)';
+potential_mat = interp1(thetavec,potential_mat',theta_n(1:(N(3)+1)/2))';
 
-for i = 1:N(3)
+for i = 1:(N(3)+1)/2
     [X,Y]=meshgrid(x_n,y_n);
     pe3D(:,:,i)=griddata(xypos(:,1,1),xypos(:,2,1),potential_mat(:,i),X,Y,'cubic');
 end
-
+pe3D = cat(3,pe3D,flip(pe3D(:,:,1:end-1),3));
 for i = 1:N(3)
     figure(100+i);
     %stest = surf(X,Y,pe3D(:,:,i)); set(stest,'LineStyle','none'); caxis([color_scale_min color_scale_max]); view([0 90]); daspect(asp); xlim(Lx); ylim(Ly);

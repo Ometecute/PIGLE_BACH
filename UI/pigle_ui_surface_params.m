@@ -1,12 +1,12 @@
 
 %% params for surface_params.m
-T=50;              % Surface temperature
+T=100;              % Surface temperature
 Nprtcl_total = 10;  % Total number of adsorbates
 mass_list = [300];% Mass list (amu) of the adsorbate species
 radius = [4]; % Radii of the adsorbates (relavent only for when rotations are included)
 number_density = [0.05]; % Number density of each adsorbate
-eta =2 ; eta2=4;    % The friction term "gamma"
-eta_theta = 20; eta_theta2 = 2; % The rotational friction term
+eta = 1 ; eta2=4;    % The friction term "gamma"
+eta_theta = 1; eta_theta2 = 2; % The rotational friction term
 tau = [1];          % Related to the time-dependence of the translational friction
 
 a1=2.461;                          %graphene lattice in Angstrom
@@ -14,7 +14,7 @@ a1=2.461;                          %graphene lattice in Angstrom
 x0 = 0; nx = 120; xdim = a1;                 % x dimention params of the unitcell/PES
 y0 = 0; ny = 200; ydim = a1*sqrt(3.0);       % y dimention params of the unitcell/PES
 z0 = 0; nz = 20; zdim = 10;                 % z dimention params of the unitcell/PES
-theta0 = 0; ntheta = 2; thetadim = 2*pi/6; % theta dimention params of the unitcell/PES
+theta0 = 0; ntheta = 9; thetadim = 4*pi/6; % theta dimention params of the unitcell/PES
 numOfPrmtvCells = [1 1]; % How many primitive cells exist in the XY potential
 
 % Create a unit cell
@@ -57,7 +57,7 @@ form_factor_hemisphere_radius = {repmat(0.5,r_conf_Natoms{1},1)};
 A_case = {1};
 A_w0   = {eta};
 A_dw   = {1./tau};
-A_eta  = {eta};
+A_eta  = [eta];
 A_tau  = {tau};
 A_spatial_depended_friction = {0}; % enable/disable spatial depended friction
 
@@ -89,7 +89,7 @@ A_spatial_depended_friction = {0}; % enable/disable spatial depended friction
 A_theta_case = {1};
 A_theta_w0   = {eta_theta};
 A_theta_dw   = {1};
-A_theta_eta  = {eta_theta};
+A_theta_eta  = [eta_theta];
 A_theta_tau  = {1};
 A_spatial_depended_theta_friction = {0}; % enable/disable spatial depended angular friction
 
