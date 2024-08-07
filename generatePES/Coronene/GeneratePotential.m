@@ -13,7 +13,7 @@ a=2.461; ac=2.461/2/cos(pi/6); % lattice vectors (in Angström)
 
 
 % coronene 9x9 graphite incl. rot [tl-9x9-co-1.x;tl-9x9-co-30.x]
-pot_vals =[-2.124  -2.136  -2.164  -2.208;  -2.272  -2.228  -2.169  -1.986]*(1000);
+pot_vals =[-2.272  -2.228  -2.169  -1.986;-2.124  -2.136  -2.164  -2.208]*(1000);
 % coronene 9x9 bilayer incl. rot [bl-9x9-co-1.x;bl-9x9-co-30.x]
 % pot_vals =[-2.081  -2.089  -2.153  -2.182;  -2.244  -2.209  -2.110  -1.952]*(1000);
 
