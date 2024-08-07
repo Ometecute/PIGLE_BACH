@@ -91,10 +91,10 @@ save(job_name,'job_strct')
 
 % create run_job file
 cd(pigle_shell_path)
-if exist('run_job.m','file')==2
+if isfile('run_job.m')
     fid  = fopen('run_job.m','w');
     fprintf(fid,'%s',' ');
-    fclose(fid)
+    fclose(fid);
 end
 [ret, name] = system('hostname');
 name = strtrim(name);
@@ -108,8 +108,13 @@ for i=start_i:(start_i-1)+Njobs
     else
         str2 = ['sub_job_path=pwd; run(''../../sweepParams/pigle_run_single_task.m'')'];
     end
+    if i>start_i
+        str3 = 'rmpath(sub_job_path);';
+    else 
+        str3 = '';
+    end
     %str3 = ['sleep ' num2str(5*i)];
-    fprintf(fid,'%s\n%s\n',str1,str2);
+    fprintf(fid,'%s\n%s\n%s\n',str1,str3,str2);
 end
 
 if distributed_computing, fprintf(fid,'%s\n','wait'); end

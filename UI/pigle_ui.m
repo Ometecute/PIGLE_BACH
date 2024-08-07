@@ -11,7 +11,7 @@ N_runs = 1;             % How many runs of the simultion to perform
 run_parallel = 1;       % Use parralell computing?
 
 % Specify dK as a 2D vector, 3rd dim is azimuths.
-dK = [0.05 0.1 0.15 0.2:0.1:1 1.2:0.2:5];
+dK = [ 0.2:0.1:1 1.2:0.2:1.8 2:0.5:5];
 azim_1 = [1 0];
 azim_2 = [1 1];
 

@@ -14,7 +14,7 @@ a1=2.461;                          %graphene lattice in Angstrom
 x0 = 0; nx = 120; xdim = a1;                 % x dimention params of the unitcell/PES
 y0 = 0; ny = 200; ydim = a1*sqrt(3.0);       % y dimention params of the unitcell/PES
 z0 = 0; nz = 20; zdim = 10;                 % z dimention params of the unitcell/PES
-theta0 = 0; ntheta = 9; thetadim = 4*pi/6; % theta dimention params of the unitcell/PES
+theta0 = -2*pi/6; ntheta = 9; thetadim = 4*pi/6; % theta dimention params of the unitcell/PES
 numOfPrmtvCells = [1 1]; % How many primitive cells exist in the XY potential
 
 % Create a unit cell

@@ -1,2 +1,2 @@
-job_name = 'TempSweep';
-proj_name = 'Pyrazine';
+job_name = 'EtaThetaTempSweep';
+proj_name = 'Coronene';
