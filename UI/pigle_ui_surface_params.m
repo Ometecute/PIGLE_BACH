@@ -1,7 +1,7 @@
 
 %% params for surface_params.m
 T=100;              % Surface temperature
-Nprtcl_total = 10;  % Total number of adsorbates
+Nprtcl_total = 20;  % Total number of adsorbates
 mass_list = [300];% Mass list (amu) of the adsorbate species
 radius = [4]; % Radii of the adsorbates (relavent only for when rotations are included)
 number_density = [0.05]; % Number density of each adsorbate
@@ -14,7 +14,7 @@ a1=2.461;                          %graphene lattice in Angstrom
 x0 = 0; nx = 120; xdim = a1;                 % x dimention params of the unitcell/PES
 y0 = 0; ny = 200; ydim = a1*sqrt(3.0);       % y dimention params of the unitcell/PES
 z0 = 0; nz = 20; zdim = 10;                 % z dimention params of the unitcell/PES
-theta0 = -2*pi/6; ntheta = 9; thetadim = 4*pi/6; % theta dimention params of the unitcell/PES
+theta0 = 0; ntheta = 9; thetadim = 4*pi/6; % theta dimention params of the unitcell/PES
 numOfPrmtvCells = [1 1]; % How many primitive cells exist in the XY potential
 
 % Create a unit cell
@@ -22,6 +22,7 @@ unitcell = prepFuncs.make_unitcell([nx xdim x0],[ny ydim y0],'z',[nz zdim z0 z_e
 
 % Calculate the moment of inertia of the adsorbates for rotational motion
 angular_mass_list = mass_list.*radius.^2;
+angular_mass_list = 1520;
 
 Nmass = length(mass_list);
 

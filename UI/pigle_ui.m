@@ -11,7 +11,7 @@ N_runs = 1;             % How many runs of the simultion to perform
 run_parallel = 1;       % Use parralell computing?
 
 % Specify dK as a 2D vector, 3rd dim is azimuths.
-dK = [ 0.2:0.1:1 1.2:0.2:1.8 2:0.5:5];
+dK = [ 0.2:0.1:1 1.2:0.2:1.8 2:0.25:5];
 azim_1 = [1 0];
 azim_2 = [1 1];
 
@@ -21,7 +21,7 @@ beam_ki = 3.3977; % Angstrom ^{-1}
 
 % Specify simulation time parameters
 % (those will be adjusted by the program, see below if interested)
-sample_time = 2e-3;       % time step for simulation, ps
+sample_time = 1e-3;       % time step for simulation, ps
 sample_time_clist = 1e-2;
 isf_sample_time = 5e-2;   % ISF time interval, ps
 thermalizing_time = 20;   % time at the begining of the simulation to allow thermalization
