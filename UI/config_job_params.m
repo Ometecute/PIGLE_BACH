@@ -4,7 +4,7 @@
 % GNU/GPL-3.0-or-later.
 
 % describe the job
-job_name = 'SweepTempInt0';
+job_name = 'SweepTempEta';
 proj_name = 'Pyrazine'; % Folder under which MD results will be saved
 
 % Enable and config distributed computing (for using a job scheduler such
@@ -14,5 +14,5 @@ dist_comp_cmd = 'sbatch ~/pigle_sweep_slurm_submit.peta4-skylake';
 n_cores_available = 8; %  How many parallel processes can be used on the target machine
 
 % Define the parameter space and values to be probed.
-sweepParams = {'T'};
-sweepVal = {{ 100,140,200,250,300,320,340,370,400}};
+sweepParams = {'A_eta','T'};
+sweepVal = {{0.1 0.3 1 3 10},{ 100,140,200,250,300,320,340,370,400}};
