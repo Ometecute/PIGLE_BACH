@@ -60,11 +60,11 @@ form_factor_hemisphere_radius = {repmat(0.5,r_conf_Natoms{1},1)};
 % populations), or as a cell-array (with the i'th element distributed to the i'th
 % population)
 %
-A_case = {2};  % 1->no, 2 ->low-pass,3->spike,4->bi-low-pass  filters
+A_case = {1};  % 1->no, 2 ->low-pass,3->spike,4->bi-low-pass  filters
 A_w0   = {eta};
 A_dw   = {1./tau};
-A_eta  = {eta};
-A_tau  = {tau};
+A_eta  = [eta];
+A_tau  = [tau];
 A_spatial_depended_friction = {0}; % enable/disable spatial depended friction
 
 % To define spatial dependent friction, we provide function+variables to

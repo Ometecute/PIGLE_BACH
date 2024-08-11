@@ -107,8 +107,8 @@ form_factor_conf = rmfield(form_factor_conf,'hemisphere_radius');
 [A_strct(1:Nmass).A_case] = deal(A_case{:});
 [A_strct(1:Nmass).w0]   = deal(A_w0{:});
 [A_strct(1:Nmass).dw]   = deal(A_dw{:});
-[A_strct(1:Nmass).eta]  = deal(A_eta{:});
-[A_strct(1:Nmass).tau]  = deal(A_tau{:});
+[A_strct(1:Nmass).eta]  = deal(A_eta(:));
+[A_strct(1:Nmass).tau]  = deal(A_tau(:));
 
 [params.prtcl(1:Nmass).A_spatial_depended_friction]    = deal(A_spatial_depended_friction{:});
 
