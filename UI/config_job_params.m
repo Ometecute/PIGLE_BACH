@@ -15,4 +15,4 @@ n_cores_available = 8; %  How many parallel processes can be used on the target 
 
 % Define the parameter space and values to be probed.
 sweepParams = {'A_eta','T'};
-sweepVal = {{0.1 0.3 1 3 10},{ 100,140,200,250,300,320,340,370,400}};
+sweepVal = {{0.1 0.3 1 3 10},{ 100,140,170,200,240,270,300,340,370,400}};
