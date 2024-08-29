@@ -4,7 +4,7 @@
 % GNU/GPL-3.0-or-later.
 
 % describe the job
-job_name = 'SweepTempInt0';
+job_name = 'SweepTempInt100';
 proj_name = 'Pyrazine'; % Folder under which MD results will be saved
 
 % Enable and config distributed computing (for using a job scheduler such

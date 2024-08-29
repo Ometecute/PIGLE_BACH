@@ -74,7 +74,7 @@ unitcell_area = (sqrt(3)/2)*(a1^2);
 % C-N...H bond between Pyrazine attempts
 a_pyrazine = 6.06; % Angström
 sigma = a_pyrazine/2^(1/6);
-epsilon = 50; % meV (max bond-strenght)
+epsilon = 100; % meV (max bond-strenght)
 
 fparam1_12 = 12*4*epsilon*sigma^12;
 fparam1_6 = -6*4*epsilon*sigma^6;
