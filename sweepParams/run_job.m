@@ -1,300 +1,150 @@
- cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_1
+ cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_1
 
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_2
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_2
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_3
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_3
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_4
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_4
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_5
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_5
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_6
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_6
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_7
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_7
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_8
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_8
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_9
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_9
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_10
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_10
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_11
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_11
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_12
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_12
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_13
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_13
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_14
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_14
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_15
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_15
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_16
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_16
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_17
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_17
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_18
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_18
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_19
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_19
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_20
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_20
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_21
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_21
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_22
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_22
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_23
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_23
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_24
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_24
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_25
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_25
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_26
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_26
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_27
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_27
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_28
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_28
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_29
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_29
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_30
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_30
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_31
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_31
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_32
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_32
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_33
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_33
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_34
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_34
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_35
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_35
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_36
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_36
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_37
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_37
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_38
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_38
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_39
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_39
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_40
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_40
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_41
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_41
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_42
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_42
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_43
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_43
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_44
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_44
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_45
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_45
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_46
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_46
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_47
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_47
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_48
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_48
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_49
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_49
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_50
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_51
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_52
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_53
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_54
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_55
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_56
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_57
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_58
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_59
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_60
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_61
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_62
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_63
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_64
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_65
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_66
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_67
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_68
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_69
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_70
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_71
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_72
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_73
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_74
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_75
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_76
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_77
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_78
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_79
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_80
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_81
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_82
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_83
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_84
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_85
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_86
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_87
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_88
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_89
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_90
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_91
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_92
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_93
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_94
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_95
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_96
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_97
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_98
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_99
-rmpath(sub_job_path);
-sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
-cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaThetaTempSweep/EtaThetaTempSweep_100
+cd C:\Users\benno\Documents\MATLAB\BACC\PIGLE/EtaTempSweep/EtaTempSweep_50
 rmpath(sub_job_path);
 sub_job_path=pwd; run('../../sweepParams/pigle_run_single_task.m')
