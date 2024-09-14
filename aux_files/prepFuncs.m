@@ -266,7 +266,7 @@ classdef prepFuncs
                     PotMatrix = PotMatrix(:,:,indx,:);
                 end
                 if ~params.theta_enabled
-                    [zvl,indx] = min(PotMatrix(1,1,1,:));
+                    [zvl,indx] = min(squeeze(min(PotMatrix,[],[1,2,4])));
                     PotMatrix = PotMatrix(:,:,:,indx);
                 end
             elseif length(size(PotMatrix)) == 3 && ~params.theta_enabled && ~params.z_enabled
